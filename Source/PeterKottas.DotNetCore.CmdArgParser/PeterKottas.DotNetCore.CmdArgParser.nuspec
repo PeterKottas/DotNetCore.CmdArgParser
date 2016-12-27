@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>PeterKottas.DotNetCore.CmdArgParser</id>
+    <title>PeterKottas.DotNetCore.CmdArgParser</title>
+    <version>1.0.1</version>
+    <authors>Peter Kottas</authors>
+    <description>Simple library capable of parsing out command line arguments. Very easy to use api and examples provided</description>
+    <summary>Command line argument parser</summary>
+    <language>en-US</language>
+    <tags>dotnetcore,.netcore,cmd,'command line',cmd arguments</tags>
+    <projectUrl>https://github.com/PeterKottas/DotNetCore.CmdArgParser</projectUrl>
+    <licenseUrl>https://github.com/PeterKottas/DotNetCore.CmdArgParser/blob/master/LICENSE</licenseUrl>
+  </metadata>
+	<files>
+    <file src="bin\Release\netstandard1.6\*.dll" target="lib\netstandard1.6" />
+    <file src="bin\Release\netcoreapp1.1\*.dll" target="lib\netcoreapp1.1" />
+  </files>
+</package>

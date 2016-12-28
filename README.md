@@ -10,16 +10,16 @@ Using nuget:
 ## Usage
 
 1. Using statement:
-'''cs
+```cs
 using PeterKottas.DotNetCore.CmdArgParser;
-'''
+```
 2. Api for parsing:
-'''cs
+```cs
 CmdArgParser.Parse(config =>{
 });
-'''
+```
 3. Add your first parsing parameter
-'''cs
+```cs
 CmdArgParser.Parse(config =>{
   config.AddParameter(new CmdArgParam()
     {
@@ -31,9 +31,9 @@ CmdArgParser.Parse(config =>{
       }
   });
 });
-'''
+```
 4. Advanced example
-'''cs
+```cs
 CmdArgParser.Parse(config =>{
   config.AddParameter(new CmdArgParam()
     {
@@ -53,9 +53,9 @@ CmdArgParser.Parse(config =>{
       }
   });
 });
-'''
+```
 5. Parser api
-'''cs
+```cs
 CmdArgParser.Parse(config =>{
   config.UseDefaultHelp();//Configures a "help" parameter which displays default help
   config.UseAppDescription();//Configures app description used in help
@@ -65,7 +65,7 @@ CmdArgParser.Parse(config =>{
   });//Configures custom help. You can provide a function that displays custom help for you application. You get the array of parameters provided to you via parameter HelpData
   config.DisplayHelp();//Displays help. Useful inside parameter callbacks.
 });
-'''
+```
 
 ## Contributing
 

@@ -53,7 +53,6 @@ namespace PeterKottas.DotNetCore.CmdArgParser
         public void ShowHelpOnExtraArguments()
         {
             config.ShowHelpOnExtraArguments = true;
-            DisplayHelp();
         }
 
         public void CustomHelp(Action<HelpData> helpAction)

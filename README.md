@@ -10,12 +10,17 @@ Using nuget:
 ## Usage
 
 1. Using statement:
-'''using PeterKottas.DotNetCore.CmdArgParser;'''
+'''cs
+using PeterKottas.DotNetCore.CmdArgParser;
+'''
 2. Api for parsing:
-'''CmdArgParser.Parse(config =>{
-});'''
+'''cs
+CmdArgParser.Parse(config =>{
+});
+'''
 3. Add your first parsing parameter
-'''CmdArgParser.Parse(config =>{
+'''cs
+CmdArgParser.Parse(config =>{
   config.AddParameter(new CmdArgParam()
     {
       Key = "1stParamKey",
@@ -25,9 +30,11 @@ Using nuget:
         innerConfig.Username = val; //What happens when we find this key, callback with injected value
       }
   });
-});'''
+});
+'''
 4. Advanced example
-'''CmdArgParser.Parse(config =>{
+'''cs
+CmdArgParser.Parse(config =>{
   config.AddParameter(new CmdArgParam()
     {
       Key = "1stParamKey",
@@ -45,9 +52,11 @@ Using nuget:
         }
       }
   });
-});'''
+});
+'''
 5. Parser api
-'''CmdArgParser.Parse(config =>{
+'''cs
+CmdArgParser.Parse(config =>{
   config.UseDefaultHelp();//Configures a "help" parameter which displays default help
   config.UseAppDescription();//Configures app description used in help
   config.ShowHelpOnExtraArguments();//Show's extra arguments
@@ -55,7 +64,8 @@ Using nuget:
   {
   });//Configures custom help. You can provide a function that displays custom help for you application. You get the array of parameters provided to you via parameter HelpData
   config.DisplayHelp();//Displays help. Useful inside parameter callbacks.
-});'''
+});
+'''
 
 ## Contributing
 

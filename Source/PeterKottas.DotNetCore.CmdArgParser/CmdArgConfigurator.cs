@@ -56,6 +56,11 @@ namespace PeterKottas.DotNetCore.CmdArgParser
             DisplayHelp();
         }
 
+        public void CustomHelp(Action<HelpData> helpAction)
+        {
+            config.CustomHelp = helpAction;
+        }
+
         public void DisplayHelp()
         {
             

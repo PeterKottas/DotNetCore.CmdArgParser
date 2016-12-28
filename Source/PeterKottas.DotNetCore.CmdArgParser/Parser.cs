@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PeterKottas.DotNetCore.CmdArgParser
 {
-    public static class CmdArgParser
+    public static class Parser
     {
 
         public static List<string> Parse(Action<CmdArgConfigurator> configAction)

@@ -10,15 +10,18 @@ Using nuget:
 ## Usage
 
 1. Using statement:
+  
   ```cs
   using PeterKottas.DotNetCore.CmdArgParser;
   ```
 2. Api for parsing:
+  
   ```cs
   CmdArgParser.Parse(config =>{
   });
   ```
 3. Add your first parsing parameter
+  
   ```cs
   CmdArgParser.Parse(config =>{
     config.AddParameter(new CmdArgParam()
@@ -33,6 +36,7 @@ Using nuget:
   });
   ```
 4. Advanced example
+  
   ```cs
   CmdArgParser.Parse(config =>{
     config.AddParameter(new CmdArgParam()
@@ -55,6 +59,7 @@ Using nuget:
   });
   ```
 5. Parser api
+  
   ```cs
   CmdArgParser.Parse(config =>{
     config.UseDefaultHelp();//Configures a "help" parameter which displays default help

@@ -38,7 +38,7 @@ namespace PeterKottas.DotNetCore.CmdArgParser
                             {
                                 if (argumentLC.StartsWith(key))
                                 {
-                                    var rightSide = argumentLC.Substring(key.Length);
+                                    var rightSide = argument.Substring(key.Length);
                                     if (string.IsNullOrEmpty(rightSide))
                                     {
                                         parameter.Value(string.Empty);

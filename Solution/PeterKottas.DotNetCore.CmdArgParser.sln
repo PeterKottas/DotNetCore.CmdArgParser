@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{36E0BA65-9D96-4649-8C1C-1D4AD221D5A8}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PeterKottas.DotNetCore.CmdArgParser", "..\Source\PeterKottas.DotNetCore.CmdArgParser\PeterKottas.DotNetCore.CmdArgParser.xproj", "{610A2D8E-5066-403D-8CD1-A68CCF787F04}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0EB14C67-6C43-44B7-AD95-380E0F458BCC}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PeterKottas.DotNetCore.Tests.CmdArgParser", "..\Source\Tests\PeterKottas.DotNetCore.Tests.CmdArgParser\PeterKottas.DotNetCore.Tests.CmdArgParser.xproj", "{E17E8A21-14BF-4FC9-9EEB-D3895E473DF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeterKottas.DotNetCore.CmdArgParser", "..\Source\PeterKottas.DotNetCore.CmdArgParser\PeterKottas.DotNetCore.CmdArgParser.csproj", "{610A2D8E-5066-403D-8CD1-A68CCF787F04}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeterKottas.DotNetCore.Tests.CmdArgParser", "..\Source\Tests\PeterKottas.DotNetCore.Tests.CmdArgParser\PeterKottas.DotNetCore.Tests.CmdArgParser.csproj", "{E17E8A21-14BF-4FC9-9EEB-D3895E473DF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

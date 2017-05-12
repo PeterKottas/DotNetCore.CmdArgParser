@@ -7,6 +7,9 @@ Very easy to use and feature rich command line argument parser.
 Using nuget:
 **Install-Package PeterKottas.DotNetCore.CmdArgParser**
 
+or from the commandline:
+**dotnet add package PeterKottas.DotNetCore.CmdArgParser**
+
 ## Usage
 
 1. Using statement:
@@ -17,13 +20,13 @@ Using nuget:
 2. Api for parsing:
   
   ```cs
-  CmdArgParser.Parse(config =>{
+  Parser.Parse(config =>{
   });
   ```
 3. Add your first parsing parameter
   
   ```cs
-  CmdArgParser.Parse(config =>{
+  Parser.Parse(config =>{
     config.AddParameter(new CmdArgParam()
       {
         Key = "1stParamKey",
@@ -38,7 +41,7 @@ Using nuget:
 4. Advanced example
   
   ```cs
-  CmdArgParser.Parse(config =>{
+  Parser.Parse(config =>{
     config.AddParameter(new CmdArgParam()
       {
         Key = "1stParamKey",
@@ -61,7 +64,7 @@ Using nuget:
 5. Parser api
   
   ```cs
-  CmdArgParser.Parse(config =>{
+  Parser.Parse(config =>{
     config.UseDefaultHelp();//Configures a "help" parameter which displays default help
     config.UseAppDescription();//Configures app description used in help
     config.ShowHelpOnExtraArguments();//Show's extra arguments

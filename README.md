@@ -71,6 +71,10 @@ Using nuget:
     config.DisplayHelp();//Displays help. Useful inside parameter callbacks.
   });
   ```
+  
+## Created and sponsored by
+
+- [GuestBell](https://guestbell.com/) - Customer centric online POS for Hotels and short terms stays.
 
 ## Contributing
 

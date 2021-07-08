@@ -5,7 +5,7 @@ namespace PeterKottas.DotNetCore.CmdArgParser
 {
     public class CmdArgParam
     {
-        private Action<string> value;
+        private Action<string> _value;
 
         public string Key { get; set; }
 
@@ -17,7 +17,9 @@ namespace PeterKottas.DotNetCore.CmdArgParser
                 {
                     return new List<string>();
                 }
+
                 var split = Key.Split('|');
+
                 return new List<string>(split);
             }
         }
@@ -26,18 +28,16 @@ namespace PeterKottas.DotNetCore.CmdArgParser
         {
             get
             {
-                if (value != null)
+                if (_value != null)
                 {
-                    return value;
+                    return _value;
                 }
-                else
-                {
-                    return (val) => { };
-                }
+
+                return (val) => { };
             }
             set
             {
-                this.value = value;
+                _value = value;
             }
         }
 

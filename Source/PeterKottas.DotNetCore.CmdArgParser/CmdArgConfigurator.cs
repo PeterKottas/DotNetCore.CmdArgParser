@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using PeterKottas.DotNetCore.CmdArgParser.Utils.Help;
 
 namespace PeterKottas.DotNetCore.CmdArgParser
 {
     public class CmdArgConfigurator
     {
-        CmdArgConfiguration config;
+        private readonly CmdArgConfiguration _config;
+
         public CmdArgConfigurator(CmdArgConfiguration config)
         {
-            this.config = config;
+            _config = config;
         }
 
         public void AddParameter(CmdArgParam param)
         {
-            config.parameters.Add(param);
+            _config.Parameters.Add(param);
         }
 
         public void AddParameters(List<CmdArgParam> parameters)
@@ -37,7 +37,7 @@ namespace PeterKottas.DotNetCore.CmdArgParser
 
         public void UseDefaultHelp()
         {
-            config.parameters.Add(new CmdArgParam()
+            _config.Parameters.Add(new CmdArgParam
             {
                 Description = "Shows application help",
                 Key = "help",
@@ -47,37 +47,37 @@ namespace PeterKottas.DotNetCore.CmdArgParser
 
         public void UseAppDescription(string description)
         {
-            config.AppDescription = description;
+            _config.AppDescription = description;
         }
 
         public void ShowHelpOnExtraArguments()
         {
-            config.ShowHelpOnExtraArguments = true;
+            _config.ShowHelpOnExtraArguments = true;
         }
 
         public void CustomHelp(Action<HelpData> helpAction)
         {
-            config.CustomHelp = helpAction;
+            _config.CustomHelp = helpAction;
         }
 
         public void DisplayHelp()
         {
-            
-            var helpData = new HelpData()
+            var helpData = new HelpData
             {
-                AppDescription = config.AppDescription,
-                parameters = config.parameters.Select(item => new CmdArgParam()
+                AppDescription = _config.AppDescription,
+                Parameters = _config.Parameters.Select(item => new CmdArgParam
                 {
                     Description = item.Description,
                     Key = item.Key,
                     Value = item.Value
                 }).ToList()
             };
-            if(config.CustomHelp!=null)
+
+            if (_config.CustomHelp != null)
             {
                 try
                 {
-                    config.CustomHelp(helpData);
+                    _config.CustomHelp(helpData);
                 }
                 catch (Exception e)
                 {

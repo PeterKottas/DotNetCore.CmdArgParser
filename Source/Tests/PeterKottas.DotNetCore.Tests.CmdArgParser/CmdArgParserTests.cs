@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Xunit;
+﻿using Xunit;
 
 namespace PeterKottas.DotNetCore.Tests.CmdArgParser
 {
@@ -11,7 +7,6 @@ namespace PeterKottas.DotNetCore.Tests.CmdArgParser
         [Fact]
         public void SimpleEndToEnd()
         {
-
         }
     }
 }

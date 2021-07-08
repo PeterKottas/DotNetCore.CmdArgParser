@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace PeterKottas.DotNetCore.CmdArgParser.Utils.Help
 {
     public class HelpData
     {
-        public List<CmdArgParam> parameters;
+        public List<CmdArgParam> Parameters;
 
         public string AppDescription { get; set; }
     }

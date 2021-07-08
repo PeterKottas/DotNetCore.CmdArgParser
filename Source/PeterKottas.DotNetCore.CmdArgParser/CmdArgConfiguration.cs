@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using PeterKottas.DotNetCore.CmdArgParser.Utils.Help;
 
 namespace PeterKottas.DotNetCore.CmdArgParser
 {
     public class CmdArgConfiguration
     {
-        public List<CmdArgParam> parameters;
+        public List<CmdArgParam> Parameters;
 
         public string AppDescription { get; set; }
 
@@ -20,7 +18,7 @@ namespace PeterKottas.DotNetCore.CmdArgParser
 
         public CmdArgConfiguration()
         {
-            parameters = new List<CmdArgParam>();
+            Parameters = new List<CmdArgParam>();
             OnUnrecognizedArguments = (list) => { };
             ShowHelpOnExtraArguments = false;
         }
